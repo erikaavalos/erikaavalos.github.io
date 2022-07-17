@@ -1,7 +1,7 @@
 - 👋 Hi, I’m @erikaavalos 
-- 👀 I enjoy challenging myself
+- 👀 I enjoy learning and pushing my limits
 - 🌱 I’m currently learning Python...send help!
-- 💞️ I’m looking to collaborate on projects and share my knowledge
+- 💞️ I’m looking to collaborate on projects, share feedback and spread knowledge
 - 📫 Email me at ByErika.Avalos@gmail.com
 
 
