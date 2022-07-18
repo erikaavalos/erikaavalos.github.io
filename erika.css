@@ -185,8 +185,9 @@
 {
   
     display: block;
+    align-items: center;
     justify-content: center;
-    background-image: url();
+    text-align: center;
     margin: 10px;
     width: 100%;
     height: 5vh;
