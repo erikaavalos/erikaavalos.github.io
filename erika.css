@@ -38,7 +38,7 @@
      }
     .navigation
     {
-        margin-top: 75px;
+        margin-top: 5px;
         position: sticky;
         top: 30px;
         width: 55%;
@@ -132,25 +132,35 @@
        animation-fill-mode:forwards;
    }
    #name-text:hover
-   {
-    color:rgb(228, 224, 224);
-    border-radius: .5rem;
-    width: 70%;
-    font-size: 5em;
+      {
+    color:rgb(20, 39, 61);
+    font-size: 4.5em;
+    transform: translateY(10px);
     /* background-color: #8499c1; */
-     background: linear-gradient(120deg, rgb(137, 156, 194), rgb(151, 165, 192),rgba(131, 110, 92, 0.664));
+    /*
+     background: linear-gradient(120deg, rgb(158, 179, 219), rgb(154, 156, 115),rgba(76, 138, 84, 0.664)); */
+     border-radius: 15px;
+     width: 40%;
+        background-color:rgb(161, 182, 212);
+        transition:.9s;
+        border: 1px solid rgb(238, 228, 228);
+        box-shadow: 10px 10px 50px 10px rgba(221, 219, 213, 0.733);
     animation-name: erika;
-    animation-duration: 1.5s;
+    animation-duration: 3s;
     animation-iteration-count: infinite;
 
 }
 @keyframes erika {
-    100%{
-        width: 60%;
-        opacity: .7;
+   25%{
+        opacity: 1;    
     }
-    50%{
-        opacity: .6;
+50% {
+    opacity: .8;
+    }
+100%{
+        font-size: 5em;
+        opacity: 1;
+        box-shadow: -10px 10px 40px 10px rgba(221, 219, 213, 0.733);
     }
 }
 #resume
@@ -348,21 +358,23 @@ p /*NOTE DIRECTLY VIA EMAL*/
     bottom: 10px;
     float:right;
     left: 300px;
-    margin: 40px 0;
-    z-index: 1;
-    animation-name: bounce;
-    animation-duration: 2.5s;
+    margin: 50px 0;
+    z-index: 0;
+    animation-name: back2top;
+    animation-duration: 7.5s;
     animation-iteration-count: infinite;
     animation-timing-function: ease-in-out;
 }
-@keyframes bounce{
-
+@keyframes back2top{
     50%{
-        bottom: 100px;
-        opacity: .4;
+        bottom: 180px;
+    }
+    75%{
+        bottom: 270px;
+        opacity: .7;
     }
     100% {
-      bottom: 190px;
-      opacity: .9;
+      bottom: 400px;
+      opacity: 1;
     }
   }
