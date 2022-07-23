@@ -147,20 +147,12 @@
 @keyframes erika {
     100%{
         width: 60%;
-        opacity: .8;
-    }
-    50%{
         opacity: .7;
     }
+    50%{
+        opacity: .6;
+    }
 }
-/*.LinkedInURL
-   {
-    display:block;
-    padding: auto;
-    position:relative
-    
-   }*/
-
 #resume
 {   
     padding: 1rem ;
@@ -168,6 +160,24 @@
    /* height: 39rem;*/
     background-color: rgb(126, 143, 165);
     /*NOTE PADDING 2REM AND HEIGHT ARE RESUMES BCKGRND*/
+}
+.linkdtext
+   {
+    display:block;
+    padding: auto;
+    position:relative;
+    
+   }
+#projects
+{
+    margin-top: 30rem;
+    padding: 50px 150px;
+    padding-bottom: 30rem;
+    width:100%;
+    position:static;
+    display: flex;
+    justify-content: center;
+    line-height: 140px;
 }
 #contme
 {
@@ -188,6 +198,7 @@
     align-items: center;
     justify-content: center;
     text-align: center;
+    opacity: .6;
     margin: 10px;
     width: 100%;
     height: 5vh;
@@ -228,17 +239,6 @@
     border: 3px solid black;
     
 }
-#projects
-{
-    margin-top: 30rem;
-    padding: 50px 150px;
-    padding-bottom: 30rem;
-    width:100%;
-    position:static;
-    display: flex;
-    justify-content: center;
-    line-height: 140px;
-}
 #complete
 {
     position: relative;
@@ -260,13 +260,6 @@ p /*NOTE DIRECTLY VIA EMAL*/
     padding: 10px 10px;
 
 }
-/* .email-img
-{
-
-    width:100%;
-    height: 300px;
-    opacity: .6;
-} */
 #contact-cont
 {
     width: 100%;
@@ -358,7 +351,7 @@ p /*NOTE DIRECTLY VIA EMAL*/
     margin: 40px 0;
     z-index: 1;
     animation-name: bounce;
-    animation-duration: 3s;
+    animation-duration: 2.5s;
     animation-iteration-count: infinite;
     animation-timing-function: ease-in-out;
 }
@@ -367,7 +360,6 @@ p /*NOTE DIRECTLY VIA EMAL*/
     50%{
         bottom: 100px;
         opacity: .4;
-      
     }
     100% {
       bottom: 190px;
