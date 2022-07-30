@@ -31,21 +31,43 @@
         margin-bottom: 200px;
         font-size: 4em;
     }
-  .subtitle {
-        
+ .intro
+    {
+        height: 5vh;
+        display: grid;
+        place-items: center;
+    }
+     .subtitle
+    {
         color: black;
-        font-size: 1.5em;
+        font-size: 1em;
         font-weight: 400;
-        opacity: 0;
-        transform: translateY(3rem);
-        animation: fadeUp 2s ease forwards;
+        opacity: .8;
+        transform: translateY(-1rem);
+        animation: fadeUp 5s ease forwards;
+        width: 51ch;
+        animation: typing 5s steps(51), blink .5s step-end infinite alternate;
+        white-space: nowrap;
+         overflow: hidden;
+         border-right: 3px solid;
+        font-family: monospace;
       }
       @keyframes fadeUp {
         to {
           opacity: 1;
           transform: translateY(0);
         }
-      }      
+      } 
+      @keyframes typing {
+        from {
+          width: 0
+        }
+      }
+      @keyframes blink {
+        50% {
+          border-color: transparent
+        }
+      }
     body
     {
         display:flex;
@@ -185,13 +207,13 @@
         box-shadow: -10px 10px 40px 10px rgba(221, 219, 213, 0.733);
     }
 }
-.linkdtext
+.LinkedIn
    {
     display:block;
     padding: auto;
     position:relative;
-    
    }
+
 #resume
 {   
     padding: 1rem ;
@@ -258,9 +280,9 @@
     margin: auto;
     display: flex;
     justify-content: center;
-    z-index: -1;
-    animation: survey 2s ease forwards;
-    opacity: 0;
+    z-index: 0;
+    animation: survey 3s linear infinite;
+    opacity: 0.5;
     animation-duration: 2.5s;
     animation-iteration-count: infinite;
     animation-timing-function:ease forwards;
@@ -285,6 +307,18 @@
     width:70%;
     display: flex;
     justify-content: center;
+       animation: blog 2s ease-in;
+    opacity: 0.5;
+    animation-duration: 3.5s;
+    animation-iteration-count: infinite;
+    animation-timing-function:ease forwards;
+}
+@keyframes blog {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+    
+  }
 }
 #projects
 {
