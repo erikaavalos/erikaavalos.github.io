@@ -1,14 +1,13 @@
 @import url('https://fonts.googleapis.com/css2?family=Smooch+Sans:wght@200&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Play&display=swap');
-*
 
+*
     {
     margin: 0;
     padding: 0;
     box-sizing:border-box;
     font-family: 'Smooch Sans', sans-serif;
     font-size: 20px;
-
     /* border: 1px solid purple; */
     }
     :root
@@ -17,27 +16,42 @@
         --clr2: rgb(107, 48, 20);
         --clr3: white;
     }
+
      h1
     {
+        top: 0px;
         position:relative;
         display: flex;
         justify-content: center;
         font-size: 4.5em;
-        margin: 80px;
-        margin-top: 195px;
-        
+        margin: 40px 0px;
     }
- .htmlcss{
-        margin-bottom: 200px;
-        font-size: 4em;
-    }
- .intro
+    .name-text
     {
-        height: 5vh;
-        display: grid;
-        place-items: center;
+    position:relative;
+    display: inline-block;
+    justify-content: center;
+    font-size: 3.5em;
+    color: rgb(77, 64, 64);
+    animation-name: erika;
+    animation-duration: 1s;
+    animation-iteration-count: infinite;
+ 
     }
-     .subtitle
+    #name-text:hover
+    {
+    color: white;
+    border-radius: 25px;
+    background-color:transparent;
+    transition:.9s;
+ }
+ .wave
+ {
+    width: 30px;
+    display: inline-block;
+    
+ }
+    .subtitle
     {
         color: black;
         font-size: 1em;
@@ -45,12 +59,13 @@
         opacity: .8;
         transform: translateY(-1rem);
         animation: fadeUp 5s ease forwards;
-        width: 51ch;
-        animation: typing 5s steps(51), blink .5s step-end infinite alternate;
+        width: 54ch;
+        animation: typing 4.5s steps(54), blink .5s step-end infinite alternate;
         white-space: nowrap;
          overflow: hidden;
          border-right: 3px solid;
         font-family: monospace;
+        
       }
       @keyframes fadeUp {
         to {
@@ -74,16 +89,31 @@
         flex-direction:column;
         justify-content: center;
         align-items: center;
-        min-height: 100vh;
-        background: var(--clr);
+        min-height: 350vh;
+        background: linear-gradient(-45deg, #ee528e,rgb(187, 135, 211), #23a6d5, #23d5ab);
+    	background-size: 600% 600%;
+	    animation: gradient 10s ease infinite;
+	    height: 400vh;
      }
+     
+@keyframes gradient {
+	0% {
+		background-position: 0% 50%;
+	}
+	50% {
+		background-position: 100% 50%;
+	}
+	100% {
+		background-position: 0% 50%;
+	}
+}
     .navigation
     {
-        margin-top: 5px;
+        margin-top: 35px;
         position: sticky;
         top: 30px;
         width: 55%;
-        height: 75px;
+        height: 80px;
         background:rgb(161, 182, 212);
         display:flex;
         max-width: 360px;
@@ -93,27 +123,29 @@
         z-index: 1;
         opacity: .7;
     }
-  #minigap
+    #minigap
     {
         margin-top: 40px;
     }
     .gap
     {
-        margin: 10rem auto;
+        margin: 7rem auto;
     }
        .navigation ul
        {
         display:flex;
         width:300px;
         /* NOTE TRIED OTHER WIDTH CALC,THIS IS THE SWEET SPOT */
+     
     }
     .navigation ul li
     {
         position:relative;
         list-style: none;
-        width:150px;
-        height:115px;
+        width:160px;
+        height:120px;
         z-index:1;
+      
     }
     .navigation ul li a
     {
@@ -122,10 +154,10 @@
         justify-content:center;
         align-items: center;
         flex-direction: column;
-        width:115%;
+        width:100%;
         height:120px;
         text-align: center;
-        font-weight: 600;
+       
     }
     .navigation ul li a .icon
     {
@@ -133,111 +165,155 @@
         display: block;
         text-align: center;
         transition: 0.5s;
-        color: rgba(51, 94, 158, 0.664);
+        color: rgba(3, 3, 3, 0.664);
+       
     }
     .navigation ul li:hover a .icon
     {
         transform: translateY(-15px);
         color: rgb(0, 0, 0);
         font-size: 3.5em;
-        font-weight: 300;
+        font-weight: 700;
         block-size: 3.8rem;
         opacity: 1;
         line-height: 35px;
         /*border-radius: 1.5rem;*/
         border-radius: 10px;
-        width: 85px;
+        width: 90px;
         background-color:rgb(161, 182, 212);
         transition:.7s;
         border: 1px solid rgb(238, 228, 228);
         box-shadow: 0px 7px 20px 10px rgba(221, 219, 213, 0.733);
-        
+       
     }
    .navigation ul li a .text
    {
-       
+   
        position: absolute;
-       color: rgb(20, 39, 61);
-       font-weight: 150;
-       font-size: 1em;
-       letter-spacing:.05em;
+       color: rgb(15, 16, 17);
+       font-weight: 200;
+       font-size: 20px;
+       letter-spacing:1.5px;
        transition:.5s;
        opacity:0;
-       
        transform: translateY(20px);
    }
    .navigation ul li:hover a .text
    {
        opacity: 1;
-      
        transform: translateY(5px);
-       background-color:rgb(167, 185, 209);
+       background-color:rgb(161, 182, 212);
      /*  box-shadow: 0px 7px 20px 10px rgba(221, 219, 213, 0.733); */
        animation-fill-mode:forwards;
    }
-   #name-text:hover
-      {
-    color:rgb(20, 39, 61);
-    font-size: 4.5em;
-    transform: translateY(10px);
-    /* background-color: #8499c1; */
-    /*
-     background: linear-gradient(120deg, rgb(158, 179, 219), rgb(154, 156, 115),rgba(76, 138, 84, 0.664)); */
-     border-radius: 15px;
-     width: 40%;
-        background-color:rgb(161, 182, 212);
-        transition:.9s;
-        border: 1px solid rgb(238, 228, 228);
-        box-shadow: 10px 10px 50px 10px rgba(221, 219, 213, 0.733);
-    animation-name: erika;
-    animation-duration: 3s;
-    animation-iteration-count: infinite;
-
-}
-@keyframes erika {
-   25%{
-        opacity: 1;    
-    }
-50% {
-    opacity: .8;
-    }
-100%{
-        font-size: 5em;
-        opacity: 1;
-        box-shadow: -10px 10px 40px 10px rgba(221, 219, 213, 0.733);
-    }
-}
 .LinkedIn
    {
     display:block;
     padding: auto;
     position:relative;
    }
+   .thanks
+   {
+    display: block;
+    position:relative;
+    text-align: right;
+    font-size: 3.5em;
+    left: 150px;
+    top: 80px;
+    z-index: 3;
+   }
+   .avatar
+   {
+    top: -20px;
+    right: 200px;
+    display: block;
+    position:relative;
+    background-image: url(./woman-clipart-md.png);
+    height: 31rem;
+    opacity: .8;
+    width: 62%;
+    z-index: 0;
 
-#resume
-{   
-    padding: 1rem ;
-    width: 90%;
-   /* height: 39rem;*/
-    background-color: rgb(126, 143, 165);
-    /*NOTE PADDING 2REM AND HEIGHT ARE RESUMES BCKGRND*/
+   }
+   .avatar:hover
+  {
+    transform: scale(1.5);
+    opacity: .4;
+    backdrop-filter: blur(10px);
+    filter: blur(3px);
+    transition: 0.5s ease;
+    }
+#aboutme
+{
+    display:flex;
+    position:relative;
+    line-height: 50px;
+    font-weight: 300;
+    width: 50%;
+    text-decoration-color: rgb(0, 0, 0) ;
+    left: 200px;
+    bottom: 580px;
+}
+.resume {
+    position: relative;
+    display: block;
+    right:-260px;
+    bottom:490px;
+    width: 160px;
+    height: 50px;
+    color: #fff;
+    background: #111;
+    cursor: pointer;
+    
+    z-index: 0;
+    border-radius: 10px;
+}
+#downloadicon:hover
+{
+   color:white;
+   transform: scale(1.5);
+
+
+}
+.htmlcss{
+    margin-top: 100px;
+    font-size: 3em;
+    font-weight: 600;
+   
+
+}
+.projects
+{
+  
+    padding: 5px 60px;
+    width:100%;
+    position:static;
+    display: flex;
+    justify-content: center;
+
+
 }
 .card {
-    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    display: inline-block;
+    line-height: 100px;
+    box-shadow: 5px 14px 18px 0 rgba(0, 0, 0, 0.2);
     transition: 0.5s;
-    width:20%;
+    width:25%;
     display: flex;
-    margin-top: 25px;
-  }
+    margin-top: 60px;
+    
+    
+}
   .card:hover {
     box-shadow: 0 20px 40px 0 rgba(0,0,0,0.2);
     width: 30%;
     z-index: 1;
+
   }
 #projectpic {
     position:relative;
     margin: auto;
-    width:80%;
+    width:100%;
     display: flex;
     justify-content: center;
     z-index: -1;
@@ -246,6 +322,7 @@
     animation-duration: 2s;
     animation-iteration-count: infinite;
     animation-timing-function:ease forwards;
+  
 
 }
 @keyframes strokes {
@@ -256,6 +333,8 @@
     }
     }
 .strokestext {
+
+  
     text-align: center;
     transform: translateY(3rem);
     animation: tribute 2.2s ease forwards;
@@ -268,29 +347,30 @@
     }
   }     
 .surveytext {
+
     text-align: center;
-    transform: translateY(3rem);
+    transform: translateY(4rem);
     animation: tribute 2.2s ease forwards;
     opacity: 0;
 }
   .surveyform
   {
-    width:80%;
+    width: 70%;
     position:relative;
     margin: auto;
     display: flex;
     justify-content: center;
+    padding: 40px 20px;
     z-index: 0;
     animation: survey 3s linear infinite;
     opacity: 0.5;
-    animation-duration: 2.5s;
-    animation-iteration-count: infinite;
-    animation-timing-function:ease forwards;
+    animation-name: survey
+
   }
   @keyframes survey {
     to {
-    transform: translateY(0);
-      opacity: 1;
+    transform: scale(1);
+    opacity: .9;
     }
   }     
   .blogtext
@@ -299,17 +379,21 @@
     transform: translateY(3rem);
     animation: tribute 2.2s ease forwards;
     opacity: 1;
+    
   }
   #blogpic
   {
+    justify-content:center;
+    align-content: center;
+    padding: 40px 20px;
+    line-height: 100px;
     position:relative;
-    margin: auto;
-    width:70%;
+    width:100%;
     display: flex;
-    justify-content: center;
-       animation: blog 2s ease-in;
+    flex-direction: row;
+    animation: blog 2s ease-in-out;
     opacity: 0.5;
-    animation-duration: 3.5s;
+    animation-duration: 2s;
     animation-iteration-count: infinite;
     animation-timing-function:ease forwards;
 }
@@ -319,29 +403,19 @@
     transform: translateY(0);
     
   }
-}
-#projects
-{
-    margin-top: 30rem;
-    padding: 50px 150px;
-    padding-bottom: 30rem;
-    width:100%;
-    position:static;
-    display: flex;
-    justify-content: center;
-    line-height: 140px;
-}
+}     
 #contme
 {
     position: relative;
     width: 480px;
-    line-height: 36px;
+    line-height: 34px;
     justify-content:center;
     align-content: center;
     padding: 22px;
-    border: 8px solid var(--clr2);
+    border: 6px solid var(--clr2);
     background-color: rgba(219, 241, 225, 0.911);
-    margin: 0 auto;
+    margin:0 auto;
+
 }
 .email-img
 {
@@ -353,7 +427,7 @@
     opacity: .6;
     margin: 10px;
     width: 100%;
-    height: 5vh;
+    height: 7vh;
     opacity: .6;
     z-index: -1;
     animation-name: email;
@@ -386,7 +460,6 @@
     font-size: 50px;
     letter-spacing: 1.5px;
     font-family: "Courier New", Courier, "Lucida Sans Typewriter", "Lucida Typewriter", monospace;
-    padding: 10px 10px;
     background-color:var(--clr3);
     border: 3px solid black;
     
@@ -395,15 +468,13 @@
 {
     position: relative;
     text-align: center;
-    margin-bottom: 20px;
+    margin: 10px 20px;
     background-color: rgb(235, 229, 229);
     padding: 1px;
-    border-color:  rgba(124, 151, 132, 0.911);
+    border-color:  rgba(25, 83, 42, 0.911);
+    
 }
-#minigap
-{
-    margin: 1rem auto;
-}
+
 p /*NOTE DIRECTLY VIA EMAL*/
 {
     text-align: center;
@@ -412,28 +483,21 @@ p /*NOTE DIRECTLY VIA EMAL*/
     padding: 10px 10px;
 
 }
-#contact-cont
-{
-    width: 100%;
-    height: 75px;
-}
+
 .contact .contactform 
-{
-   
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-}
-.contact .contactform .inputbox
 {
     position: relative;
     width: 100%;
+    align-items: center;
     justify-content: center;
+    text-align: center;
+    
 }
 .contactform .inputbox
 {
-    padding-bottom: .5rem;
+    padding-bottom: .4rem;
     font-size: 1.5rem;
+
 }
 
 .contactform .inputbox #tbox
@@ -442,20 +506,21 @@ p /*NOTE DIRECTLY VIA EMAL*/
    border-width: 80%;
    border-radius: 1rem;
    border-color:gray;
+  
 }
 .contactform #tbox
 {
     justify-content: center;
-
+    
 }
 .contactform .inputbox #msgbox
 {
-    padding: 15px 30px 30px;
+    padding: 15px 50px 30px 0;
     border-width: 70%;
     border-radius: 1rem;
     border-color:rgb(173, 172, 172);
+   
 }
-
 .contactform .inputbox #subbtn
 {
     justify-content: center;
@@ -475,13 +540,17 @@ p /*NOTE DIRECTLY VIA EMAL*/
     font-size: 95%;
     border: 1px solid white ;
     background-color:rgb(161, 182, 212);
-    padding: 5px 5px;
-    color: rgb(20, 39, 61);
+    padding: 10px 10px;
+    color: rgb(20, 39, 61); 
+   
 }
  a:hover
 {
     font-size: 1em;
     color: rgb(20, 39, 61);
+    animation-duration: 1s;
+    animation-iteration-count: infinite;
+    animation-timing-function:ease-in-out;
 }
 .top
 {
@@ -500,7 +569,6 @@ p /*NOTE DIRECTLY VIA EMAL*/
     bottom: 10px;
     float:right;
     left: 300px;
-    margin: 50px 0;
     z-index: 0;
     animation-name: back2top;
     animation-duration: 7.5s;
@@ -516,7 +584,7 @@ p /*NOTE DIRECTLY VIA EMAL*/
         opacity: .7;
     }
     100% {
-      bottom: 400px;
+      bottom: 300px;
       opacity: 1;
     }
   }
