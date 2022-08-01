@@ -4,44 +4,41 @@
         <meta charset="UTF-8" name="Portfolio" content="Projects"> 
         <title> Erika.Avalos</title> 
         <link rel="stylesheet" type="text/css" href="./erika.css">
-        </head>
-        <body>
-           <h1 id="name-text">ERIKA AVALOS</h1>
-                <div>
-                    <div class="subtitle"><span class="wave" role="img" aria-label="wave">👋</span> Hello, I am a Web Developer based in Dallas, TX <ion-icon name="location-outline"></ion-icon> </div>  
-                </div>
-           <div>
+        <body>  
+            <div>
             <link href="#" rel="import">
         </div>
-                    <div class="navigation">
-                       <nav>
-                        <ul>
+              <h1 id="name-text">ERIKA AVALOS</h1> 
+                        <div class="navigation">
+                           <nav class="navbar">
+                            <ul>
+                                <li class="navlist">
+                                    <a href="#About-Me">
+                                        <span class="icon">
+                                        <ion-icon name="person-outline"></ion-icon></span>
+                                        <span class="text">About Me</span>
+                                    </a>
+                            </li>
                             <li class="navlist">
-                                <a href="#About-Me">
-                                    <span class="icon">
-                                    <ion-icon name="person-outline"></ion-icon></span>
-                                    <span class="text">About Me</span>
+                                    <a href="#projects">
+                                        <span class="icon">
+                                        <ion-icon name="code-slash-outline"></ion-icon></span>
+                                        <span class="text">Projects</span>
+                                    </a>
+                            </li>
+                            <li class="navlist">
+                                <a href="#contact-cont">
+                                    <span class="icon"> 
+                                    <ion-icon name="mail-outline"></ion-icon></span>
+                                    <span class="text"> Contact Me</span>
                                 </a>
                         </li>
-                        <li class="navlist">
-                                <a href="#projects">
-                                    <span class="icon">
-                                    <ion-icon name="code-slash-outline"></ion-icon></span>
-                                    <span class="text">Projects</span>
-                                </a>
-                        </li>
-                        <li class="navlist">
-                            <a href="#contact-cont">
-                                <span class="icon"> 
-                                <ion-icon name="mail-outline"></ion-icon></span>
-                                <span class="text"> Contact Me</span>
-                            </a>
-                    </li>
-                        </ul>
-                    </nav>
-                </div>
-                <br>
-                <br>
+                            </ul>
+                        </nav>
+                    </div>
+              <div >
+                <div class="subtitle"><span class="wave" role="img" aria-label="wave">👋</span> Hello, I am a Web Developer based in Dallas, TX <ion-icon name="location-outline"></ion-icon> </div>  
+            </div>
                 <div class="LinkedInURL">
                     <div class="LinkedIn">
                         <a href="https://www.linkedin.com/in/erikaavalosv?trk=p">
@@ -51,44 +48,43 @@
                      </a>
                     </div>
                 </div>
-                <div class="gap"></div>
+         
+                <br>
+                <br>
+               </main>
+        </head>
+        <div class="container1">
+                <div id="content1">
                      <div id="About-Me"></div>
                    <br>
-                     <h1 class="thanks"> Hi, nice to meet you :) </h1>
+                     <h2 class="thanks"> Hi, nice to meet you :) </h2>
                     <p class="avatar" style="background-image: url(./woman-clipart-md.png)"></p>
                         <div id="aboutme">
                             <p>
-                                Im Erika, I am 26 years old and I enjoy creating web pages. 
-                                Im passionate about learning, Im results oriented and I like to challenge myself.
-                                I spend most of my afternoons building pages from scratch and adding customized features
+                                Im Erika, I am 26 years old and I enjoy creating web pages. <br>
+                                Im passionate about learning, Im results oriented and I challenge myself daily.
+                                I spend most of my time building pages from scratch and adding customized features
                                 using HTML, CSS and currently learning to implement JavaScript and other frameworks.
                                 <br>
                            </p>
                         </div>
            
-                     <div>
+                     <div class="resumebtn">
                             <button class="resume" type="button">
                                 <span class="download">
                                     <a href="https://github.com/erikaavalos/erikaavalos.github.io/blob/main/Erika%20Avalos.pdf">
-                                <ion-icon id="downloadicon" name="download-outline"></ion-icon></a> My Resume</button>
+                                <ion-icon id="expandicon" name="expand-outline"></ion-icon></a> My Resume</button>
                                     </div>
-                <!--
-                <div id="resume">
-                    <nav class="pdf">
-                        <embed src="./Images/ERIKA-AVALOS.png" type="application/pdf" width="100%"
-                        height="700px"/>
-                    </a>
-                    </nav>
-                </div> --> 
+           
+                <div id="content2">
                 <div id="projects"></div>
                 <h3 class="htmlcss">HTML and CSS</h3>
-              
                 <div class="projects">
                                     <div class="card">
                                             <span>
                                                 <h4 class="strokestext"><b>Tribute Page</b></h4>
                                                 <a href="/Users/erikaavalos/Desktop/strokes.html"></a>
-                                                        <img id="projectpic" src="https://images.fineartamerica.com/images/artworkimages/medium/1/the-strokes-tefu-tefo-transparent.png" alt="The Strokes">
+                                                        <img id="projectpic" src="https://images.fineartamerica.com/images/artworkimages/medium/1/the-strokes-tefu-tefo-transparent.png" alt="The Strokes" width="80%">
                                             </span>
                                         </div>
                                         <div class="minigap"></div>
@@ -97,7 +93,7 @@
                                             <h4 class="surveytext"> Survey Form</h4>
                                             <a href="#"></a>
                                             <figure class="surveyform">
-                                                <img src="data:image/png;base64,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" alt="survey png">
+                                                <img src="https://www.seekpng.com/png/full/188-1881250_to-do-clipboard-survey-petition-svg-png-icon.png" alt="survey png" width="110%" height="200px">
                                             </figure>
                                         </span></div>
                                         <div class="minigap"></div>
@@ -107,10 +103,10 @@
                                                 <a href="/Users/erikaavalos/Desktop/strokes.html"></a>
                                                         <img id="blogpic" src="https://cdn-icons-png.flaticon.com/512/3959/3959420.png" alt="Blog pic">
                                             </span>
-                                          
-                                        </div></div>
+                                        </div></div> </div>
                 <div class="gap"></div>
                 <div class="gap"></div>
+                <div id="content3">
                 <div id="contact-cont"> 
                 </div>
                 <div class="email-img">
@@ -173,14 +169,14 @@
                     </p>
                 </nav>
             </div>
-               </div>
+               </div> </div>
+               <div class="topbtn">
+                <a class="top" href="#" >Back to Top <ion-icon name="arrow-up-circle-outline"></ion-icon>
+                </a>
+              </div> </div>
                 <!--<div id="mingap"></div>-->
                 <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
                 <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
-                <div class="topbtn">
-                    <a class="top" href="#" >Back to Top <ion-icon name="arrow-up-circle-outline"></ion-icon>
-                    </a>
-                  </div>
-                
         </body> 
+        <footer></footer>
     </html>     
