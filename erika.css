@@ -90,13 +90,6 @@
           border-color: transparent;
         }
       }
-    
-    #content3
-      {
-        grid-area: content3;
-        height: 100vh;
-        outline: 3px solid rgb(172, 7, 7);
-      }
 #minigap
     {
           margin-top: 40px;
@@ -306,8 +299,6 @@
     margin-top: 100px;
     font-size: 3em;
     font-weight: 600;
-   
-
 }
 .projects
 {
@@ -355,21 +346,22 @@
         
     }
     }
-.strokestext {
-
-  
+.strokestext 
+{
     text-align: center;
     transform: translateY(3rem);
     animation: tribute 2.2s ease forwards;
     opacity: 0;
 }
-@keyframes tribute {
+@keyframes tribute 
+{
     to {
       opacity: 1;
       transform: translateY(0);
     }
   }     
-.surveytext {
+.surveytext 
+{
 
     text-align: center;
     transform: translateY(4rem);
@@ -402,7 +394,6 @@
     transform: translateY(3rem);
     animation: tribute 2.2s ease forwards;
     opacity: 1;
-    
   }
   #blogpic
   {
@@ -425,7 +416,12 @@
     opacity: 1;
     transform: translateY(0);
   }
-}     
+}
+#content3
+{
+     grid-area: content3;
+     height: 100vh;
+}
 #contme
 {
     position: relative;
