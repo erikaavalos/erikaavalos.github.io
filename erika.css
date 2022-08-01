@@ -221,7 +221,6 @@
     grid-area: content1;
     justify-content:center;
     position:relative;
-    outline: 1px solid red;
 }
    .thanks
    {
@@ -293,7 +292,6 @@
 {
   grid-area: content2;
   height:80vh;
-  outline: 1px solid pink;
 }
 .htmlcss{
     margin-top: 100px;
