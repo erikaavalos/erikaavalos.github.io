@@ -19,19 +19,19 @@
 .container1
 {
     display:grid;
-    height: 350vh;
-    grid-template-columns:1fr;
+    height: 360vh;
+    grid-template-columns:1.5fr;
     grid-template-rows:1.5fr 1fr 1.2fr 1fr;
     grid-template-areas:
-    "main main main"
-    "navbar navbar navbar"
+    "main"
+    "navbar"
     "content1 content2 content3"
-    "footer footer footer";
+    "footer";
     grid-gap: 1rem;
 }
      h1
     {
-        top: 100px;
+        top: 80px;
         position:relative;
         display: flex;
         justify-content: center;
@@ -48,7 +48,6 @@
     animation-name: erika;
     animation-duration: 1s;
     animation-iteration-count: infinite;
-   
     }
     #name-text:hover
     {
@@ -65,20 +64,22 @@
     }
     .subtitle
     {
-        
+        position:relative;
+        display: flex;
+        bottom: 40px;
         color: black;
         font-size: 1em;
         font-weight: 400;
         opacity: .8;
-        transform: translateY(-12rem);
+        transform: translateY(-1rem);
         animation: fadeUp 5s ease forwards;
         width: 54ch;
+        max-width: 54ch;
         animation: typing 4.5s steps(54), blink .5s step-end infinite alternate;
         white-space: nowrap;
         overflow: hidden;
         border-right: 3px solid;
         font-family: monospace;
-        
       }
       @keyframes typing {
         from {
@@ -90,6 +91,7 @@
           border-color: transparent;
         }
       }
+
 #minigap
     {
           margin-top: 40px;
@@ -107,8 +109,8 @@
         min-height: 350vh;
         background: linear-gradient(-45deg, #ee528e,rgb(187, 135, 211), #23a6d5, #23d5ab);
     	background-size: 600% 600%;
-	animation: gradient 10s ease infinite;
-	height: 420vh;
+	    animation: gradient 10s ease infinite;
+	    height: 450vh;
      }
      
 @keyframes gradient {
@@ -144,6 +146,8 @@
        {
         display:flex;
         width:300px;
+        /* NOTE TRIED OTHER WIDTH CALC,THIS IS THE SWEET SPOT */
+     
     }
     .navigation ul li
     {
@@ -152,6 +156,7 @@
         width:160px;
         height:120px;
         z-index:1;
+      
     }
     .navigation ul li a
     {
@@ -163,6 +168,7 @@
         width:100%;
         height:120px;
         text-align: center;
+       
     }
     .navigation ul li a .icon
     {
@@ -171,6 +177,7 @@
         text-align: center;
         transition: 0.5s;
         color: rgba(3, 3, 3, 0.664);
+       
     }
     .navigation ul li:hover a .icon
     {
@@ -207,6 +214,7 @@
        opacity: 1;
        transform: translateY(5px);
        background-color:rgb(161, 182, 212);
+     /*  box-shadow: 0px 7px 20px 10px rgba(221, 219, 213, 0.733); */
        animation-fill-mode:forwards;
    }
 .LinkedInURL
@@ -214,8 +222,8 @@
     display:block;
     padding: auto;
     position:relative;
+    margin-bottom: 10px;
    }
-
 #content1
 {
     grid-area: content1;
@@ -228,8 +236,8 @@
     position:relative;
     text-align: center;
     font-size: 3em;
-    left: 10px;
-    top: 80px;
+    left: 140px;
+    top: 100px;
     z-index: 3;
    }
 
@@ -241,35 +249,37 @@
     background-image: url(./woman-clipart-md.png);
     height: 31rem;
     opacity: .8;
-    width: 58%;
+    width: 60%;
+    max-width: 60%;
     z-index: 0;
-
+    transform: scale(1.5);
+    filter: blur(1px);
+    opacity: .6;
    }
    .avatar:hover
   {
-    transform: scale(1.5);
-    opacity: .4;
-/*    backdrop-filter: blur(10px); */
+    opacity: .3;
     filter: blur(2px);
-    transition: 0.5s ease;
+    transition: 0.5s ease-in;
     }
 #aboutme
 {
     display:flex;
     position:relative;
+    text-align: center;
     line-height: 46px;
     font-weight: 300;
-    width: 60%;
+    width: 50%;
     text-decoration-color: rgb(0, 0, 0) ;
     left: 400px;
-    bottom: 490px;
-   
+    bottom: 460px;
+    max-width: 60%;
 }
 .resume {
     text-align: center;
     position: relative;
     display:block;
-    bottom:320px;
+    bottom:520px;
     width: 160px;
     height: 50px;
     color: #fff;
@@ -286,7 +296,34 @@
 .resumebtn .resume
 {
  float: right;
- transform: translate(-10em);
+ transform: translateX(-8em);
+}
+.favs
+{
+    bottom: 180px;
+    text-align: center;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    display: inline-block;
+    width: 100%;
+    height:180px;
+}
+.favoritespots ul li
+{
+    display: flex;
+    flex-direction: column;
+    display: inline-block;
+    font-weight: 600;
+    width: 12%;
+    
+}
+.favoritespots ul li .iconfavs
+{
+    text-align: center;
+    position: relative;
+    
+    font-size: 40px;
 }
 #content2
 {
@@ -294,13 +331,16 @@
   height:80vh;
 }
 .htmlcss{
+    top: 140px;
+    text-align: center;
+    position: relative;
     margin-top: 100px;
     font-size: 3em;
+    height:90px;
     font-weight: 600;
 }
 .projects
 {
-  
     padding: 5px 60px;
     width:100%;
     position:static;
@@ -312,15 +352,14 @@
     line-height: 100px;
     box-shadow: 5px 14px 18px 0 rgba(0, 0, 0, 0.2);
     transition: 0.5s;
-    width:25%;
+    width:28%;
     display: flex;
-    margin-top: 60px;
+    margin-top: 200px;
 }
   .card:hover {
     box-shadow: 0 20px 40px 0 rgba(0,0,0,0.2);
     width: 30%;
     z-index: 1;
-
   }
 #projectpic {
     position:relative;
@@ -334,16 +373,14 @@
     animation-duration: 2s;
     animation-iteration-count: infinite;
     animation-timing-function:ease forwards;
-  
-
 }
-@keyframes strokes {
+@keyframes strokes 
+{
     100% {
         transform: scale(.9);
         opacity: 1;
-        
     }
-    }
+}
 .strokestext 
 {
     text-align: center;
@@ -357,9 +394,8 @@
       opacity: 1;
       transform: translateY(0);
     }
-  }     
-.surveytext 
-{
+}     
+.surveytext {
 
     text-align: center;
     transform: translateY(4rem);
@@ -377,7 +413,7 @@
     z-index: 0;
     animation: survey 3s linear infinite;
     opacity: 0.5;
-    animation-name: survey
+    animation-name: survey;
 
   }
   @keyframes survey {
@@ -392,6 +428,7 @@
     transform: translateY(3rem);
     animation: tribute 2.2s ease forwards;
     opacity: 1;
+    
   }
   #blogpic
   {
@@ -413,12 +450,13 @@
   to {
     opacity: 1;
     transform: translateY(0);
+    
   }
-}
+}     
 #content3
 {
-     grid-area: content3;
-     height: 100vh;
+  grid-area: content3;
+  height: 100vh;
 }
 #contme
 {
@@ -432,35 +470,6 @@
     background-color: rgba(219, 241, 225, 0.911);
     margin:0 auto;
 
-}
-.email-img
-{
-  
-    display: block;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-    opacity: .6;
-    margin: 10px;
-    width: 100%;
-    height: 7vh;
-    opacity: .6;
-    z-index: -1;
-    animation-name: email;
-    animation-duration: 4.5s;
-    animation-iteration-count: 3;
-    animation-timing-function: ease-in-out;
-}
-@keyframes email{
-0% {
-    transform:translateY(-50px);
-}
-50% {
-    transform:translateY(50px);
-}
-100% {
-    transform:translateY(150px);
-}
 }
 .container
 {
@@ -477,6 +486,8 @@
     letter-spacing: 1.5px;
     font-family: "Courier New", Courier, "Lucida Sans Typewriter", "Lucida Typewriter", monospace;
     background-color:var(--clr3);
+    border: 3px solid black;
+    
 }
 #complete
 {
@@ -489,7 +500,7 @@
     
 }
 
-p 
+p /*NOTE DIRECTLY VIA EMAL*/
 {
     text-align: center;
     font-size: 1.3rem;
@@ -552,11 +563,10 @@ p
 .email
 {
     font-size: 95%;
-    border: 1px solid white ;
+    border: 2px solid white ;
     background-color:rgb(161, 182, 212);
     padding: 10px 10px;
     color: rgb(20, 39, 61); 
-   
 }
  a:hover
 {
@@ -565,6 +575,34 @@ p
     animation-duration: 1s;
     animation-iteration-count: infinite;
     animation-timing-function:ease-in-out;
+}
+.email-img
+{
+  
+    display: block;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    opacity: .6;
+    margin: 10px;
+    width: 100%;
+    height: 6.8vh;
+    z-index: -1;
+    animation-name: email;
+    animation-duration: 4.5s;
+    animation-iteration-count: 3;
+    animation-timing-function: ease-in-out;
+}
+@keyframes email{
+0% {
+    transform:translateY(-50px);
+}
+50% {
+    transform:translateY(50px);
+}
+100% {
+    transform:translateY(150px);
+}
 }
 .top
 {
@@ -608,9 +646,7 @@ p
           grid-template-areas: 
             "main"
             "navbar"
-            "content1"
-            "content2"
-            "content3"
+            "content1" "content2" "content3"
             "footer";
       }
   }
