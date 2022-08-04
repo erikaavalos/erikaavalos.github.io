@@ -199,7 +199,6 @@
     }
    .navigation ul li a .text
    {
-   
        position: absolute;
        color: rgb(15, 16, 17);
        font-weight: 200;
@@ -236,24 +235,24 @@
     position:relative;
     text-align: center;
     font-size: 3em;
-    left: 140px;
+    left: 70px;
     top: 100px;
     z-index: 3;
    }
 
    .avatar
    {
+
     right: 30px;
     display: block;
     position:relative;
     background-image: url(./woman-clipart-md.png);
     height: 31rem;
-    opacity: .8;
+    opacity: .5;
     width: 45%;
     z-index: 0;
     transform: scale(1.5);
     filter: blur(1px);
-    opacity: .6;
    }
    .avatar:hover
   {
@@ -266,21 +265,21 @@
     display:flex;
     position:relative;
     text-align: center;
-    line-height: 46px;
-    font-weight: 300;
+    line-height: 45px;
+    font-weight: 500;
     width: 50%;
-    text-decoration-color: rgb(0, 0, 0) ;
-    left: 400px;
-    bottom: 460px;
     max-width: 60%;
+    text-decoration-color: rgb(0, 0, 0) ;
+    left: 420px;
+    bottom: 460px;
 }
 .resume {
     text-align: center;
     position: relative;
-    display:block;
-    bottom:520px;
+    display: block;
+    bottom: 480px;
     width: 160px;
-    height: 50px;
+    height: 55px;
     color: #fff;
     background: #111;
     cursor: pointer;
@@ -290,39 +289,58 @@
 #expandicon:hover
 {
    color:white;
-   transform: scale(1.5);
+   transform: scale(1);
 }
 .resumebtn .resume
 {
- float: right;
- transform: translateX(-8em);
+    position: relative;
+    float: right;
+    transform: translateX(-18em);
 }
 .favs
 {
-    bottom: 180px;
+    transform: translateX(25em);
+    bottom: 170px;
     text-align: center;
     position: relative;
-    display: flex;
-    flex-direction: column;
+    display: block;
     display: inline-block;
-    width: 100%;
-    height:180px;
+    width: 68%;
+    height: 100px;
+    
 }
 .favoritespots ul li
 {
     display: flex;
     flex-direction: column;
     display: inline-block;
-    font-weight: 600;
+    font-weight: 500;
     width: 12%;
+    border-radius: 10px;
+  
+}
+.favoritespots ul li:hover
+{
+    text-transform: uppercase;
+    background-color:transparent;
+    outline: 2px solid black;
+    animation-fill-mode:forwards;
+}
+.favs .favoritespots
+{
     
+    padding: 10px 10px;
+    text-align: center;
 }
 .favoritespots ul li .iconfavs
 {
     text-align: center;
     position: relative;
-    
     font-size: 40px;
+}
+.iconfavs:hover
+{
+    color: rgb(0, 0, 0);
 }
 #content2
 {
@@ -345,6 +363,7 @@
     position:static;
     display: flex;
     justify-content: center;
+    grid-area: content2;
 }
 .card {
     margin: auto;
@@ -365,22 +384,21 @@
 #projectpic {
     position:relative;
     margin: auto;
-    width:100%;
+    width:80%;
+    max-width: 80%;
+    padding: 20px 5px;
     display: flex;
     justify-content: center;
-    z-index: -1;
-    opacity: .6;
+    z-index: 1;
+    opacity: .7;
     animation-name: strokes;
     animation-duration: 2s;
     animation-iteration-count: infinite;
     animation-timing-function:ease forwards;
 }
-@keyframes strokes 
+#projectpic:hover
 {
-    100% {
-        transform: scale(.9);
-        opacity: 1;
-    }
+    opacity: 1;
 }
 .strokestext 
 {
@@ -393,18 +411,21 @@
 {
     to {
       opacity: 1;
-      transform: translateY(0);
+      transform: scale(1.5);
     }
 }     
 .surveytext {
-
+ 
     text-align: center;
-    transform: translateY(4rem);
+    transform: translateY(3rem);
     animation: tribute 2.2s ease forwards;
     opacity: 0;
 }
   .surveyform
   {
+    max-width: 120%;
+    transform: translateX(2rem);
+    z-index: 1;
     position:relative;
     margin: auto;
     display: flex;
@@ -413,13 +434,12 @@
     animation: survey 3s linear infinite;
     opacity: 0.5;
     animation-name: survey;
+
   }
-  @keyframes survey {
-    to {
-    transform: scale(1);
-    opacity: .9;
-    }
-  }     
+ .surveyform:hover
+ {
+     opacity: 1;
+ }
   .blogtext
   {
     text-align: center;
@@ -430,12 +450,13 @@
   }
   #blogpic
   {
+    transform: translateX(2rem);
     justify-content:center;
     align-content: center;
     padding: 30px 15px;
     line-height: 100px;
     position:relative;
-    width:90%;
+    width:80%;
     display: flex;
     flex-direction: row;
     animation: blog 2s ease-in-out;
@@ -444,12 +465,9 @@
     animation-iteration-count: infinite;
     animation-timing-function:ease forwards;
 }
-@keyframes blog {
-  to {
+#blogpic:hover
+ {
     opacity: 1;
-    transform: translateY(0);
-    
-  }
 }     
 #content3
 {
@@ -465,14 +483,14 @@
     align-content: center;
     padding: 22px;
     border: 6px solid var(--clr2);
-    background-color: rgba(219, 241, 225, 0.911);
+    background-color:transparent;
     margin:0 auto;
-
+    grid-area: content3;
 }
 .container
 {
     width: 100%;
-
+    grid-area: content3;
 }
 #contactme
 {
@@ -483,7 +501,7 @@
     font-size: 50px;
     letter-spacing: 1.5px;
     font-family: "Courier New", Courier, "Lucida Sans Typewriter", "Lucida Typewriter", monospace;
-    background-color:var(--clr3);
+    background-color: transparent;
     border: 3px solid black;
     
 }
@@ -494,7 +512,7 @@
     margin: 10px 20px;
     background-color: rgb(235, 229, 229);
     padding: 1px;
-    border-color:  rgba(25, 83, 42, 0.911);
+    border-color:  rgba(254, 255, 254, 0.911);
     
 }
 
@@ -561,16 +579,16 @@ p /*NOTE DIRECTLY VIA EMAL*/
 .email
 {
     font-size: 95%;
-    border: 2px solid white ;
-    background-color:rgb(161, 182, 212);
+    border: 4px solid white ;
+    background-color:transparent;
     padding: 10px 10px;
     color: rgb(20, 39, 61); 
 }
  a:hover
 {
     font-size: 1em;
-    color: rgb(20, 39, 61);
-    animation-duration: 1s;
+    border-radius: 15px;
+    animation-duration: .5s;
     animation-iteration-count: infinite;
     animation-timing-function:ease-in-out;
 }
@@ -644,7 +662,9 @@ p /*NOTE DIRECTLY VIA EMAL*/
           grid-template-areas: 
             "main"
             "navbar"
-            "content1" "content2" "content3"
+            "content1" 
+            "content2" 
+            "content3"
             "footer";
       }
   }
