@@ -107,10 +107,10 @@
         justify-content: center;
         align-items: center;
         min-height: 350vh;
-        background: linear-gradient(-45deg,rgba(106, 167, 114, 0.664), #23a6d5,  #e7acc3);
+        background: linear-gradient(-45deg,rgba(106, 167, 114, 0.664), #68b8d4,  #e7acc3);
     	background-size: 500% 500%;
-	    animation: gradient 10s ease infinite;
-	    height: 450vh;
+	animation: gradient 10s ease infinite;
+	height: 450vh;
      }
      
 @keyframes gradient {
@@ -146,8 +146,6 @@
        {
         display:flex;
         width:300px;
-        /* NOTE TRIED OTHER WIDTH CALC,THIS IS THE SWEET SPOT */
-     
     }
     .navigation ul li
     {
@@ -188,7 +186,6 @@
         block-size: 4rem;
         opacity: 1;
         line-height: 28px;
-        /*border-radius: 1.5rem;*/
         border-radius: 10px;
         width: 95px;
         background-color:rgb(161, 182, 212);
@@ -207,7 +204,6 @@
        transition:.5s;
        opacity:0;
        transform: translateY(20px);
-     
    }
    .navigation ul li:hover a .text
    {
@@ -215,7 +211,6 @@
        opacity: 1;
        transform: translateY(1px);
        background-color:rgb(161, 182, 212);
-     /*  box-shadow: 0px 7px 20px 10px rgba(221, 219, 213, 0.733); */
        animation-fill-mode:forwards;
    }
 .LinkedInURL
@@ -570,7 +565,7 @@
     
 }
 
-p /*NOTE DIRECTLY VIA EMAL*/
+p
 {
     text-align: center;
     font-size: 1.3rem;
@@ -586,13 +581,11 @@ p /*NOTE DIRECTLY VIA EMAL*/
     align-items: center;
     justify-content: center;
     text-align: center;
-    
 }
 .contactform .inputbox
 {
     padding-bottom: .4rem;
     font-size: 1.5rem;
-
 }
 
 .contactform .inputbox #tbox
@@ -601,7 +594,6 @@ p /*NOTE DIRECTLY VIA EMAL*/
    border-width: 80%;
    border-radius: 1rem;
    border-color:gray;
-  
 }
 .contactform #tbox
 {
@@ -688,11 +680,10 @@ p /*NOTE DIRECTLY VIA EMAL*/
 .top:hover
 {
 
-    border: 1px solid;
+    border: 1px solid white;
 }
 .topbtn
 {
-
     position: relative;
     bottom: 15px;
     float:right;
