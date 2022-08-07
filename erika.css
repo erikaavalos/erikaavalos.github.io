@@ -207,7 +207,7 @@
    }
    .navigation ul li:hover a .text
    {
-       
+       color: #111;
        opacity: 1;
        transform: translateY(1px);
        background-color:rgb(161, 182, 212);
@@ -227,7 +227,6 @@
    .LinkedInURL:hover
    {
     animation-fill-mode:forwards;
-    background-color:rgb(161, 182, 212);
     background-color:transparent;
     outline: 2px solid black;
    }
