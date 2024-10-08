@@ -74,9 +74,9 @@
         opacity: .8;
         transform: translateY(-1rem);
         animation: fadeUp 5s ease forwards;
-        width: 68ch;
-        max-width: 65ch;
-        animation: typing 5s steps(60), blink .5s step-end infinite alternate;
+        width: 65ch;
+        max-width: 67ch;
+        animation: typing 5s steps(59), blink .5s step-end infinite alternate;
         white-space: nowrap;
         overflow: hidden;
         border-right: 3px solid;
