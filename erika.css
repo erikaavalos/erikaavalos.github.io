@@ -65,6 +65,7 @@
      .subtitle
     {
         position:relative;
+	justify-content: center;
         display: flex;
         bottom: 40px;
         color: black;
@@ -718,10 +719,10 @@ p
             "footer";
         text-align: center;
       }
-    .copy
+.copy
   {
     position: relative;
-    top: 200px;
+    top: 250px;
         display: flex;
         justify-content: center;
         font-size: 4.5em;
