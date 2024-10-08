@@ -51,7 +51,7 @@
     }
     #name-text:hover
     {
-    color: white;
+    color: var(--clr3);
     border-radius: 25px;
     background-color:transparent;
     transition:.9s;
@@ -62,10 +62,9 @@
     display: inline-block;
     
     }
-     .subtitle
+    .subtitle
     {
         position:relative;
-	justify-content: center;
         display: flex;
         bottom: 40px;
         color: black;
@@ -74,9 +73,9 @@
         opacity: .8;
         transform: translateY(-1rem);
         animation: fadeUp 5s ease forwards;
-        width: 67ch;
-        max-width: 66ch;
-        animation: typing 4.5s steps(60), blink .5s step-end infinite alternate;
+        width: 68ch;
+        max-width: 65ch;
+        animation: typing 5s steps(60), blink .7s step-end infinite alternate;
         white-space: nowrap;
         overflow: hidden;
         border-right: 3px solid;
@@ -110,8 +109,8 @@
         min-height: 350vh;
         background: linear-gradient(-45deg,rgba(106, 167, 114, 0.664), #68b8d4,  #e7acc3);
     	background-size: 500% 500%;
-	animation: gradient 10s ease infinite;
-	height: 450vh;
+	    animation: gradient 10s ease infinite;
+	    height: 450vh;
      }
      
 @keyframes gradient {
@@ -147,6 +146,8 @@
        {
         display:flex;
         width:300px;
+        /* NOTE TRIED OTHER WIDTH CALC,THIS IS THE SWEET SPOT */
+     
     }
     .navigation ul li
     {
@@ -175,7 +176,6 @@
         text-align: center;
         transition: 0.5s;
         color: rgba(3, 3, 3, 0.664);
-    
     }
     .navigation ul li:hover a .icon
     {
@@ -203,12 +203,14 @@
        font-size: 20px;
        letter-spacing:1.5px;
        transition:.5s;
-       opacity:0;
+       opacity: 0;
        transform: translateY(20px);
+     
    }
    .navigation ul li:hover a .text
    {
        color: #111;
+       font-weight: 300;
        opacity: 1;
        transform: translateY(1px);
        background-color:rgb(161, 182, 212);
@@ -229,6 +231,7 @@
    {
     animation-fill-mode:forwards;
     background-color:transparent;
+    outline: 2px solid black;
    }
    .thanks
    {
@@ -241,6 +244,7 @@
     z-index: 2;
     max-width: 60%;
     letter-spacing: 1.6px;
+    
    }
 
    .avatar
@@ -303,7 +307,7 @@
     width: 160px;
     height: 55px;
     color: #fff;
-    background: #111;
+    background: #222;
     cursor: pointer;
     z-index: 0;
     overflow: hidden;
@@ -580,11 +584,13 @@ p
     align-items: center;
     justify-content: center;
     text-align: center;
+    
 }
 .contactform .inputbox
 {
     padding-bottom: .4rem;
     font-size: 1.5rem;
+
 }
 
 .contactform .inputbox #tbox
@@ -593,6 +599,7 @@ p
    border-width: 80%;
    border-radius: 1rem;
    border-color:gray;
+  
 }
 .contactform #tbox
 {
@@ -683,6 +690,7 @@ p
 }
 .topbtn
 {
+
     position: relative;
     bottom: 15px;
     float:right;
@@ -718,13 +726,13 @@ p
             "footer";
         text-align: center;
       }
-.copy
+  }
+  .copy
   {
     position: relative;
-    top: 250px;
+    top: 200px;
         display: flex;
         justify-content: center;
         font-size: 4.5em;
         margin: auto;
     }
-
